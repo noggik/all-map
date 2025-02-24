@@ -1,6 +1,6 @@
 local placeScripts = {
     [537413528] = "https://raw.githubusercontent.com/noggik/build/refs/heads/main/build%20a%20boat",
-    [10704789056] = "https://raw.githubusercontent.com/noggik/Drive-world/refs/heads/main/drive",
+    [10704789056] = "https://raw.githubusercontent.com/noggik/drive1.1/refs/heads/main/drive1.lua,https://raw.githubusercontent.com/noggik/drive1.1/refs/heads/main/deive2.lua",
 }
 
 local function loadScript(url)
