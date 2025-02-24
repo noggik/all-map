@@ -1,1 +1,23 @@
+local placeScripts = {
+    [537413528] = "https://raw.githubusercontent.com/noggik/build/refs/heads/main/build%20a%20boat",
+}
 
+local function loadScript(url)
+    local success, response = pcall(function()
+        return game:HttpGet(url, true)
+    end)
+
+    if success then
+        loadstring(response)()
+    else
+        warn("โหลดสคริปต์ล้มเหลว: " .. url)
+    end
+end
+
+local placeId = game.PlaceId
+if placeScripts[placeId] then
+    print("โหลดสคริปต์สำหรับ PlaceId:", placeId)
+    loadScript(placeScripts[placeId])
+else
+    print("ไม่มีสคริปต์ที่กำหนดสำหรับ PlaceId:", placeId)
+end
